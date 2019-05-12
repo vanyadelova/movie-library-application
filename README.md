@@ -1,68 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-move-list
+It is a SPA(Single Page Application) app to browse movies written in React.
+The data is from https://www.themoviedb.org/documentation/api. (Details please see [APIs](#APIs))
 
-## Available Scripts
+There are two main pages:
 
-In the project directory, you can run:
+### Home page
+- A scrollable list of movies with their poster, name, rating and genres.
+- Movies can be listed by selected order and filter, even search with specific keyword.
+- Click a movie will leads to its detail page.
 
-### `npm start`
+### Movie detail page
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- List the full movie title, release year, description, duration, additional images, rating and the top 3 billed cast members.
+- Click on the images will open a lightbox to show more images.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Run it locally 🖥
+```bash
+$ git clone https://github.com/xu3u4/react-movie-list.git
+$ npm install # to install node packages.
+$ npm run dev # to run the app in development mode
+```
+Then open `localhost:3000` on browser to see the app.
 
-### `npm test`
+## <a name="APIs">APIs</a> 🕸
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Sort by/Filter by
+[/discover/movie](https://developers.themoviedb.org/3/discover/movie-discover)
+On home page, default gets All genres and sort by Popularity.
+When dropdown value changed, it will send another request according to the selection.
 
-### `npm run build`
+### Keyword search
+[/search/movie](https://developers.themoviedb.org/3/search/search-movies)
+After input the keyword, click on search icon to do search.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Genre list
+[/genre/movie/list](https://developers.themoviedb.org/3/genres/get-movie-list)
+Only genre id is returned from `/discover/movie` and `/search/movie`, we need the genre name and id mapping from this API.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Get movie details
+[/movie/${movieId}](https://developers.themoviedb.org/3/movies/get-movie-details)
+Use movieId to get its details.
+The origin API doesn't contain actors and images info, adding [append_to_response](https://developers.themoviedb.org/3/getting-started/append-to-response) parameter, we tell the API to make sub-requests with only one API call. And the response will append to our main request.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Main techniques 🛠
+- React
+- Redux
+- Webpack
+- Recompose
+- React router dom
+- Single Page Application
+- [react-lazyload](https://github.com/jasonslyvia/react-lazyload)
+- [react-circular-progressbar](https://github.com/iqnivek/react-circular-progressbar)
+- [react-images](https://github.com/jossmac/react-images)
 
-### `npm run eject`
+## Enhancement 🚀
+[#4](https://github.com/xu3u4/react-movie-list/issues/4) Enable do search on pressing Enter
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[#5](https://github.com/xu3u4/react-movie-list/issues/5) Add unit test
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[#6](https://github.com/xu3u4/react-movie-list/issues/6) Keyword search is not working with pagination
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Bug 🐞
+[#1](https://github.com/xu3u4/react-movie-list/issues/1) On Production mode, reload will be 404
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[#3](https://github.com/xu3u4/react-movie-list/issues/3) On Production mode, the images from file system on movie detail page is 404
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Other issues: https://github.com/xu3u4/react-movie-list/issues
