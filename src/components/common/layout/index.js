@@ -8,7 +8,7 @@ const CommonLayout = ({ children }) => {
   return (
     <div id="page">
       <header>
-        <div className="header-title">Movies</div>
+        <div className="header-title">Movie library application</div>
       </header>
       <main>{children}</main>
     </div>
