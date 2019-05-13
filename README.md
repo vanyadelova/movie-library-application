@@ -1,8 +1,8 @@
 
-                     ![icon](https://cdn0.iconfinder.com/data/icons/ballicons/128/3d-512.png)
+                     
 
 # 🎥 MOVIE-APP 🎥 
-## [🐕🐩 Check out the deployed version here! 🐩🐕](https://dog-quiz.netlify.com)
+## [ 🎬 📽 Check out the deployed version here! 🎬 📽](https://dog-quiz.netlify.com)
 ## What this project is about
 
 
