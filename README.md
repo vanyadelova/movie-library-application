@@ -2,7 +2,7 @@
 It is a SPA(Single Page Application) app to browse movies written in React.
 The data is from https://www.themoviedb.org/documentation/api. 
 
-# 🐶 DOG-QUIZ 🐶 ![icon](https://cdn0.iconfinder.com/data/icons/ballicons/128/3d-512.png | width=100)
+# 🐶 DOG-QUIZ 🐶 ![icon](https://cdn0.iconfinder.com/data/icons/ballicons/128/3d-512.png)
 ## [🐕🐩 Check out the deployed version here! 🐩🐕](https://dog-quiz.netlify.com)
 ## What this project is about
 
