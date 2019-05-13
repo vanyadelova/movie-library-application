@@ -17,27 +17,22 @@ The data is grabbed from the Movie DB - https://www.themoviedb.org/documentation
 
 ## Run it locally 🖥
 ```bash
-$ git clone https://github.com/xu3u4/react-movie-list.git
+$ git clone https://github.com/vanyadelova/movie-library-application.git
 $ npm install # to install node packages.
 $ npm run dev # to run the app in development mode
 ```
 Then open `localhost:3000` on browser to see the app.
 
 
+## Technologies used
 
-
-
-
-
-## Main techniques 🛠
 - React
 - Redux
 - Webpack
-- Recompose
 - React router dom
-- Single Page Application
-- [react-lazyload](https://github.com/jasonslyvia/react-lazyload)
-- [react-circular-progressbar](https://github.com/iqnivek/react-circular-progressbar)
-- [react-images](https://github.com/jossmac/react-images)
+- redux-thunk
+
+
+
 
 
