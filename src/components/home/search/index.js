@@ -29,7 +29,7 @@ export const Search = ({
           <input
             className="search-input"
             type="text"
-            placeholder="Search for movies"
+            placeholder="Find Movies & TV shows"
             onChange={onInput}
           />
         </div>
