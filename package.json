@@ -12,9 +12,7 @@
     "dev": "export NODE_ENV=development && webpack-dev-server --devtool eval --progress --colors --content-base dist",
     "eslint": "eslint src/js test",
     "fix-eslint": "eslint src --fix"
-     
   },
-  
   "author": "Vanya",
   "license": "MIT",
   "dependencies": {
