@@ -14,7 +14,7 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
   module: {
@@ -62,7 +62,7 @@ module.exports = {
     hot: true,
     host: 'localhost',
     port: 3000,
-    contentBase: path.join(__dirname, "build"),
+    contentBase: path.join(__dirname, "dist"),
     historyApiFallback: true
   },
   resolve: {
