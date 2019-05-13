@@ -21,7 +21,7 @@ export const Search = ({
   return (
     <div className="browse">
       <div className="top-nav page-title flex">
-        <h1>All Movies</h1>
+        <h1>Movie library application</h1>
         <div className="search-bar">
           <button type="button" onClick={onSearch}>
             <FontIcon iconName="icon-search" />
